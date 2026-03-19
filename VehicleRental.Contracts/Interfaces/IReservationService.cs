@@ -19,3 +19,4 @@ namespace VehicleRental.Contracts.Interfaces
         List<ReservationDTO> GetUserReservations(int userId);
     }
 }
+

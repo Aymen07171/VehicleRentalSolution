@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +45,122 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ReservationServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UserServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\VehicleServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\ReservationServiceRef\ReservationService.wsdl" />
+    <None Include="Connected Services\ReservationServiceRef\ReservationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReservationServiceRef\ReservationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReservationServiceRef\ReservationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServiceRef\UserService.wsdl" />
+    <None Include="Connected Services\UserServiceRef\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServiceRef\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserServiceRef\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VehicleServiceRef\VehicleService.wsdl" />
+    <None Include="Connected Services\VehicleServiceRef\VehicleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VehicleServiceRef\VehicleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VehicleServiceRef\VehicleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\VehicleRental.Contracts.DTOs.ReservationDTO.datasource" />
+    <None Include="Properties\DataSources\VehicleRental.Contracts.DTOs.UserDTO.datasource" />
+    <None Include="Properties\DataSources\VehicleRental.Contracts.DTOs.VehicleDTO.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleRental.Contracts\VehicleRental.Contracts.csproj">
+      <Project>{a24643ef-d1c2-4d46-ae23-d8d18bb7665d}</Project>
+      <Name>VehicleRental.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VehicleRental.Services\VehicleRental.Services.csproj">
+      <Project>{74d5e270-0474-4957-a53d-6e3fe69c6dc9}</Project>
+      <Name>VehicleRental.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ReservationServiceRef\" />
+    <WCFMetadataStorage Include="Connected Services\UserServiceRef\" />
+    <WCFMetadataStorage Include="Connected Services\VehicleServiceRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceRef\UserService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VehicleServiceRef\VehicleService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VehicleServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VehicleServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VehicleServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ReservationServiceRef\ReservationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ReservationServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ReservationServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ReservationServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

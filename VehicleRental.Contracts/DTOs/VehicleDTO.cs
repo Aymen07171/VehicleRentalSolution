@@ -17,9 +17,9 @@ namespace VehicleRental.Contracts.DTOs
         public string LicensePlate { get; set; }
 
         [DataMember]
-        public string PricePerDay { get; set; }
+        public decimal PricePerDay { get; set; }
 
         [DataMember]
-        public string isAvailable { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }

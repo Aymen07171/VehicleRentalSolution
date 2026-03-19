@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+
 using VehicleRental.Contracts.DTOs;
 
 namespace VehicleRental.Contracts.Interfaces

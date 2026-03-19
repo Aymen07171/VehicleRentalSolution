@@ -1,7 +1,10 @@
 <Solution>
-  <Project Path="VehicleRental.Business/VehicleRental.Business.csproj" />
-  <Project Path="VehicleRental.Client/VehicleRental.Client.csproj" />
-  <Project Path="VehicleRental.Contracts/VehicleRental.Contracts.csproj" />
-  <Project Path="VehicleRental.Data/VehicleRental.Data.csproj" />
-  <Project Path="VehicleRental.Services/VehicleRental.Services.csproj" />
+  <Project Path="VehicleRental.Business/VehicleRental.Business.csproj" Id="2d2a405e-2609-4afb-8c94-2d514722dfce" />
+  <Project Path="VehicleRental.Client/VehicleRental.Client.csproj" Id="2dfe4b7c-b28f-4a53-9f71-17b2a5c246fe">
+    <BuildDependency Project="VehicleRental.Services/VehicleRental.Services.csproj" />
+  </Project>
+  <Project Path="VehicleRental.Contracts/VehicleRental.Contracts.csproj" Id="a24643ef-d1c2-4d46-ae23-d8d18bb7665d" />
+  <Project Path="VehicleRental.Data/VehicleRental.Data.csproj" Id="c3767472-4c5d-4dff-8dbe-ee7c904de2a5" />
+  <Project Path="VehicleRental.Services/VehicleRental.Services.csproj" Id="74d5e270-0474-4957-a53d-6e3fe69c6dc9" />
+  <Project Path="VehicleRental.WinClient/VehicleRental.WinClient.csproj" Id="c02a54c1-7c5b-476d-bbd7-ba0562f7151c" />
 </Solution>
