@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
-using UserServiceRef;
 using VehicleRental.Contracts.DTOs;
+using VehicleRental.WinClient.UserServiceRef;
 
 namespace VehicleRental.WinClient
 {
@@ -12,9 +12,8 @@ namespace VehicleRental.WinClient
             InitializeComponent();
         }
 
-        private async void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Basic validation before calling the service
             if (string.IsNullOrWhiteSpace(txtEmail.Text) ||
                 string.IsNullOrWhiteSpace(txtPassword.Text))
             {
@@ -25,23 +24,13 @@ namespace VehicleRental.WinClient
 
             using (UserServiceClient client = new UserServiceClient())
             {
-                // Call the generated async method and map to local DTO
-                UserServiceRef.UserDTO remoteUser = await client.LoginAsync(
+                UserDTO user = client.Login(
                     txtEmail.Text.Trim(),
                     txtPassword.Text);
 
-                if (remoteUser != null)
+                if (user != null)
                 {
-                    // Map service DTO to contract DTO and save to session
-                    Session.CurrentUser = new UserDTO
-                    {
-                        UserId = remoteUser.UserId,
-                        Email = remoteUser.Email,
-                        FullName = remoteUser.FullName,
-                        Phone = remoteUser.Phone
-                    };
-
-                    // Open the main form and close this one
+                    Session.CurrentUser = user;
                     MainForm mainForm = new MainForm();
                     mainForm.Show();
                     this.Hide();
@@ -56,7 +45,6 @@ namespace VehicleRental.WinClient
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Open the register form
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
         }

@@ -28,167 +28,178 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblWelcome = new Label();
-            tabControl = new TabControl();
-            tabPage3 = new TabPage();
-            tabPage4 = new TabPage();
-            btnLogout = new Button();
-            dgvVehicles = new DataGridView();
-            btnRefresh = new Button();
-            btnBook = new Button();
-            dgvReservations = new DataGridView();
-            btnLoadReservations = new Button();
-            btnCancel = new Button();
-            tabControl.SuspendLayout();
-            tabPage3.SuspendLayout();
-            tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvVehicles).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvReservations).BeginInit();
-            SuspendLayout();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvVehicles = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnBook = new System.Windows.Forms.Button();
+            this.dgvReservations = new System.Windows.Forms.DataGridView();
+            this.btnLoadReservations = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
+            this.SuspendLayout();
             // 
             // lblWelcome
             // 
-            lblWelcome.AutoSize = true;
-            lblWelcome.Location = new Point(83, 34);
-            lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(75, 20);
-            lblWelcome.TabIndex = 0;
-            lblWelcome.Text = "Welcome!";
-            lblWelcome.Click += label1_Click;
-            // 
-            // tabControl
-            // 
-            tabControl.Controls.Add(tabPage3);
-            tabControl.Controls.Add(tabPage4);
-            tabControl.Location = new Point(30, 80);
-            tabControl.Name = "tabControl";
-            tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(758, 285);
-            tabControl.TabIndex = 2;
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(btnBook);
-            tabPage3.Controls.Add(btnRefresh);
-            tabPage3.Controls.Add(dgvVehicles);
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(750, 252);
-            tabPage3.TabIndex = 0;
-            tabPage3.Text = "Vehicles";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(btnCancel);
-            tabPage4.Controls.Add(btnLoadReservations);
-            tabPage4.Controls.Add(dgvReservations);
-            tabPage4.Location = new Point(4, 29);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(750, 252);
-            tabPage4.TabIndex = 1;
-            tabPage4.Text = "My Reservations";
-            tabPage4.UseVisualStyleBackColor = true;
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Location = new System.Drawing.Point(353, 59);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(44, 16);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "label1";
+            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(346, 389);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(94, 29);
-            btnLogout.TabIndex = 3;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(444, 56);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(62, 129);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(907, 333);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.btnBook);
+            this.tabPage1.Controls.Add(this.btnRefresh);
+            this.tabPage1.Controls.Add(this.dgvVehicles);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(899, 304);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Vehicles tab";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnCancel);
+            this.tabPage2.Controls.Add(this.btnLoadReservations);
+            this.tabPage2.Controls.Add(this.dgvReservations);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(899, 304);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "My Reservations tab";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dgvVehicles
             // 
-            dgvVehicles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVehicles.Location = new Point(6, 18);
-            dgvVehicles.Name = "dgvVehicles";
-            dgvVehicles.ReadOnly = true;
-            dgvVehicles.RowHeadersWidth = 51;
-            dgvVehicles.ShowEditingIcon = false;
-            dgvVehicles.Size = new Size(548, 228);
-            dgvVehicles.TabIndex = 0;
+            this.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVehicles.Location = new System.Drawing.Point(6, 6);
+            this.dgvVehicles.MultiSelect = false;
+            this.dgvVehicles.Name = "dgvVehicles";
+            this.dgvVehicles.ReadOnly = true;
+            this.dgvVehicles.RowHeadersWidth = 51;
+            this.dgvVehicles.RowTemplate.Height = 24;
+            this.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVehicles.Size = new System.Drawing.Size(719, 292);
+            this.dgvVehicles.TabIndex = 0;
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(616, 70);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(94, 29);
-            btnRefresh.TabIndex = 1;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Location = new System.Drawing.Point(754, 95);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(119, 31);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnBook
             // 
-            btnBook.Location = new Point(589, 136);
-            btnBook.Name = "btnBook";
-            btnBook.Size = new Size(145, 29);
-            btnBook.TabIndex = 2;
-            btnBook.Text = "Book Selected";
-            btnBook.UseVisualStyleBackColor = true;
+            this.btnBook.Location = new System.Drawing.Point(731, 151);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(162, 30);
+            this.btnBook.TabIndex = 2;
+            this.btnBook.Text = "Book Selected";
+            this.btnBook.UseVisualStyleBackColor = true;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // dgvReservations
             // 
-            dgvReservations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReservations.Location = new Point(6, 17);
-            dgvReservations.Name = "dgvReservations";
-            dgvReservations.ReadOnly = true;
-            dgvReservations.RowHeadersWidth = 51;
-            dgvReservations.Size = new Size(580, 215);
-            dgvReservations.TabIndex = 0;
+            this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReservations.Location = new System.Drawing.Point(17, 6);
+            this.dgvReservations.MultiSelect = false;
+            this.dgvReservations.Name = "dgvReservations";
+            this.dgvReservations.ReadOnly = true;
+            this.dgvReservations.RowHeadersWidth = 51;
+            this.dgvReservations.RowTemplate.Height = 24;
+            this.dgvReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvReservations.Size = new System.Drawing.Size(704, 292);
+            this.dgvReservations.TabIndex = 0;
             // 
             // btnLoadReservations
             // 
-            btnLoadReservations.Location = new Point(626, 54);
-            btnLoadReservations.Name = "btnLoadReservations";
-            btnLoadReservations.Size = new Size(94, 29);
-            btnLoadReservations.TabIndex = 1;
-            btnLoadReservations.Text = "Load";
-            btnLoadReservations.UseVisualStyleBackColor = true;
+            this.btnLoadReservations.Location = new System.Drawing.Point(756, 43);
+            this.btnLoadReservations.Name = "btnLoadReservations";
+            this.btnLoadReservations.Size = new System.Drawing.Size(99, 44);
+            this.btnLoadReservations.TabIndex = 1;
+            this.btnLoadReservations.Text = "Load";
+            this.btnLoadReservations.UseVisualStyleBackColor = true;
+            this.btnLoadReservations.Click += new System.EventHandler(this.btnLoadReservations_Click);
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(595, 126);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(152, 29);
-            btnCancel.TabIndex = 1;
-            btnCancel.Text = "Cancel Selected";
-            btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(727, 148);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(166, 44);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Cancel Selected";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnLogout);
-            Controls.Add(tabControl);
-            Controls.Add(lblWelcome);
-            Name = "MainForm";
-            Text = "MainForm";
-            tabControl.ResumeLayout(false);
-            tabPage3.ResumeLayout(false);
-            tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvVehicles).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvReservations).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1055, 554);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.lblWelcome);
+            this.Name = "MainForm";
+            this.Text = "MainForm";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVehicles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label lblWelcome;
-        private TabControl tabControl;
-        private TabPage tabPage3;
-        private TabPage tabPage4;
-        private DataGridView dgvVehicles;
-        private Button btnLogout;
-        private Button btnBook;
-        private Button btnRefresh;
-        private Button btnCancel;
-        private Button btnLoadReservations;
-        private DataGridView dgvReservations;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnBook;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridView dgvVehicles;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnLoadReservations;
+        private System.Windows.Forms.DataGridView dgvReservations;
     }
 }

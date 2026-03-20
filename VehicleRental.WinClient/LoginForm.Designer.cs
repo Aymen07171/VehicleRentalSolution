@@ -3,12 +3,12 @@
     partial class LoginForm
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,107 +23,109 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            txtEmail = new TextBox();
-            label2 = new Label();
-            txtPassword = new TextBox();
-            btnLogin = new Button();
-            btnRegister = new Button();
-            lblMessage = new Label();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(51, 66);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Email:";
-            label1.Click += label1_Click;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(232, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Email:";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(121, 66);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(125, 27);
-            txtEmail.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(332, 108);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(120, 22);
+            this.txtEmail.TabIndex = 1;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(36, 112);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Password:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(232, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Password:";
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(121, 109);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(125, 27);
-            txtPassword.TabIndex = 1;
+            this.txtPassword.Location = new System.Drawing.Point(332, 168);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(120, 22);
+            this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(36, 175);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(94, 29);
-            btnLogin.TabIndex = 3;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += btnLogin_Click;
+            this.btnLogin.Location = new System.Drawing.Point(227, 243);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(152, 175);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(94, 29);
-            btnRegister.TabIndex = 3;
-            btnRegister.Text = "Register";
-            btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Location = new System.Drawing.Point(320, 239);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.TabIndex = 4;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lblMessage
             // 
-            lblMessage.AutoSize = true;
-            lblMessage.Location = new Point(291, 179);
-            lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(50, 20);
-            lblMessage.TabIndex = 4;
-            lblMessage.Text = "label3";
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(443, 246);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 20);
+            this.lblMessage.TabIndex = 5;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(lblMessage);
-            Controls.Add(btnRegister);
-            Controls.Add(btnLogin);
-            Controls.Add(label2);
-            Controls.Add(txtPassword);
-            Controls.Add(txtEmail);
-            Controls.Add(label1);
-            Name = "LoginForm";
-            Text = "Form1";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label1);
+            this.Name = "LoginForm";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox txtEmail;
-        private Label label2;
-        private TextBox txtPassword;
-        private Button btnLogin;
-        private Button btnRegister;
-        private Label lblMessage;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label lblMessage;
     }
 }
+
