@@ -6,5 +6,7 @@
   <Project Path="VehicleRental.Contracts/VehicleRental.Contracts.csproj" Id="a24643ef-d1c2-4d46-ae23-d8d18bb7665d" />
   <Project Path="VehicleRental.Data/VehicleRental.Data.csproj" Id="c3767472-4c5d-4dff-8dbe-ee7c904de2a5" />
   <Project Path="VehicleRental.Services/VehicleRental.Services.csproj" Id="74d5e270-0474-4957-a53d-6e3fe69c6dc9" />
-  <Project Path="VehicleRental.WinClient/VehicleRental.WinClient.csproj" Id="c02a54c1-7c5b-476d-bbd7-ba0562f7151c" />
+  <Project Path="VehicleRental.WinClient/VehicleRental.WinClient.csproj" Id="d8acda3e-9ea4-43fc-944c-84bddd7c65ec">
+    <BuildDependency Project="VehicleRental.Services/VehicleRental.Services.csproj" />
+  </Project>
 </Solution>

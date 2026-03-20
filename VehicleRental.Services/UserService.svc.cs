@@ -23,11 +23,5 @@ namespace VehicleRental.Services
         {
             return _userManager.Register(fullName, email, password, phone);
         }
-
-        // Implement the interface member required by IUserService
-        public void DoWork()
-        {
-            // No operation required for this service; method implemented to satisfy the interface.
-        }
     }
 }

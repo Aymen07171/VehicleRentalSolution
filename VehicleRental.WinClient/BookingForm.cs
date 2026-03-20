@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using VehicleServiceRef;
-using ReservationServiceRef;
+using VehicleRental.Contracts.DTOs;
+using VehicleRental.WinClient.VehicleServiceRef;
+using VehicleRental.WinClient.ReservationServiceRef;
 
 namespace VehicleRental.WinClient
 {
@@ -10,25 +11,25 @@ namespace VehicleRental.WinClient
         private readonly int _vehicleId;
         private VehicleDTO _vehicle;
 
-        // Constructor receives the vehicle ID from MainForm
         public BookingForm(int vehicleId)
         {
             InitializeComponent();
             _vehicleId = vehicleId;
         }
 
-        private async void BookingForm_Load(object sender, EventArgs e)
+        private void BookingForm_Load(object sender, EventArgs e)
         {
-            // Set minimum date to today
             dtpStart.MinDate = DateTime.Today;
             dtpEnd.MinDate = DateTime.Today.AddDays(1);
 
-            // Load vehicle details
             using (VehicleServiceClient client = new VehicleServiceClient())
             {
-                _vehicle = await client.GetVehicleByIdAsync(_vehicleId);
-                lblVehicle.Text =
-                    $"{_vehicle.Brand} {_vehicle.Model} — ${_vehicle.PricePerDay}/day";
+                _vehicle = client.GetVehicleById(_vehicleId);
+
+                if (_vehicle != null)
+                    lblVehicle.Text =
+                        $"{_vehicle.Brand} {_vehicle.Model} ({_vehicle.Year})" +
+                        $" — ${_vehicle.PricePerDay}/day";
             }
 
             UpdatePrice();
@@ -38,18 +39,19 @@ namespace VehicleRental.WinClient
         {
             if (_vehicle == null) return;
 
-            int days = (dtpEnd.Value - dtpStart.Value).Days;
+            int days = (dtpEnd.Value.Date - dtpStart.Value.Date).Days;
 
             if (days <= 0)
             {
-                lblPrice.Text = "End date must be after start date.";
                 lblPrice.ForeColor = System.Drawing.Color.Red;
+                lblPrice.Text = "End date must be after start date.";
             }
             else
             {
                 decimal total = days * _vehicle.PricePerDay;
-                lblPrice.Text = $"Total: {days} day(s) × ${_vehicle.PricePerDay} = ${total}";
                 lblPrice.ForeColor = System.Drawing.Color.Green;
+                lblPrice.Text =
+                    $"Total: {days} day(s) × ${_vehicle.PricePerDay} = ${total}";
             }
         }
 
@@ -63,9 +65,9 @@ namespace VehicleRental.WinClient
             UpdatePrice();
         }
 
-        private async void btnConfirm_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
-            int days = (dtpEnd.Value - dtpStart.Value).Days;
+            int days = (dtpEnd.Value.Date - dtpStart.Value.Date).Days;
 
             if (days <= 0)
             {
@@ -75,7 +77,7 @@ namespace VehicleRental.WinClient
 
             using (ReservationServiceClient client = new ReservationServiceClient())
             {
-                bool success = await client.BookVehicleAsync(
+                bool success = client.BookVehicle(
                     Session.CurrentUser.UserId,
                     _vehicleId,
                     dtpStart.Value,
@@ -88,7 +90,6 @@ namespace VehicleRental.WinClient
                         "Success",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-
                     this.Close();
                 }
                 else

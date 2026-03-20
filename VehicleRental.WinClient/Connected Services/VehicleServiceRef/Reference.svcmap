@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="fbcee0ed-d452-4243-b70b-1ca0e7b43a41" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61525/VehicleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VehicleService.xsd" MetadataType="Schema" ID="8b4a50d0-b2d1-470c-b6ad-47c7a6cc413f" SourceId="1" SourceUrl="http://localhost:61525/VehicleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VehicleService1.xsd" MetadataType="Schema" ID="ed0f307f-1fbd-439c-9084-73782a8dc91f" SourceId="1" SourceUrl="http://localhost:61525/VehicleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VehicleService.wsdl" MetadataType="Wsdl" ID="b600d550-45bc-4249-9b26-5cf7dd9091b0" SourceId="1" SourceUrl="http://localhost:61525/VehicleService.svc?wsdl" />
+    <MetadataFile FileName="VehicleService.disco" MetadataType="Disco" ID="35b314d8-302b-441b-bacf-7913ccf1a20e" SourceId="1" SourceUrl="http://localhost:61525/VehicleService.svc?disco" />
+    <MetadataFile FileName="VehicleService2.xsd" MetadataType="Schema" ID="f7d98e0c-0da1-4988-b61e-82d689f2ce0a" SourceId="1" SourceUrl="http://localhost:61525/VehicleService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,10 +1,8 @@
-﻿using ReservationServiceRef;
-using System;
+﻿using System;
 using System.Windows.Forms;
 using VehicleRental.Contracts.DTOs;
-using VehicleRental.WinClient.ReservationServiceRef;
 using VehicleRental.WinClient.VehicleServiceRef;
-using VehicleServiceRef;
+using VehicleRental.WinClient.ReservationServiceRef;
 
 namespace VehicleRental.WinClient
 {
@@ -17,10 +15,7 @@ namespace VehicleRental.WinClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // Show logged-in user's name
             lblWelcome.Text = $"Welcome, {Session.CurrentUser.FullName}!";
-
-            // Load vehicles immediately when form opens
             LoadVehicles();
         }
 
@@ -46,13 +41,12 @@ namespace VehicleRental.WinClient
                 return;
             }
 
-            // Get the selected vehicle's ID from the grid
             int vehicleId = (int)dgvVehicles.SelectedRows[0].Cells["VehicleId"].Value;
 
             BookingForm bookingForm = new BookingForm(vehicleId);
             bookingForm.ShowDialog();
 
-            // Refresh the list after booking
+            // Refresh after booking
             LoadVehicles();
         }
 
@@ -109,6 +103,11 @@ namespace VehicleRental.WinClient
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Close();
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
