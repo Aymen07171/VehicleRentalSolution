@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Database/">
+    <File Path="setup.sql" />
+  </Folder>
   <Project Path="VehicleRental.Business/VehicleRental.Business.csproj" Id="2d2a405e-2609-4afb-8c94-2d514722dfce" />
   <Project Path="VehicleRental.Client/VehicleRental.Client.csproj" Id="2dfe4b7c-b28f-4a53-9f71-17b2a5c246fe">
     <BuildDependency Project="VehicleRental.Services/VehicleRental.Services.csproj" />
